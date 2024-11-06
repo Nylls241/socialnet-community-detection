@@ -1,0 +1,21 @@
+[project]
+name = "socialnet-community-detection"
+version = "0.1.0"
+description = "A Python project to generate large random graphs using NetworkX with adjustable edge probability."
+authors = ["Nylls, boutotonyllsgersan@gmail.com"]
+license = "MIT"
+readme = "README.md"
+keywords = ["graph", "network", "random graph", "networkx", "large graphs"]
+
+[project.dependencies]
+networkx = "^3.0"
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
+
+[project.scripts]
+generate_graph = "large_graph_generator.main:generate_large_random_graph"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
