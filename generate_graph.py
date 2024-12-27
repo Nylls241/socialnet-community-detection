@@ -1,3 +1,5 @@
+# === Random graph generation ===
+
 import random
 
 def generate_random_graph(num_vertices):
