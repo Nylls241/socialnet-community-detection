@@ -21,6 +21,7 @@ def generate_random_graph(num_vertices):
     """
     
     # Initialize an empty adjacency list for each vertex
+    # This list adjacency represents a graph using lists where each vertex has a list of its directly connected neighbors, offering a space-efficient structure for sparse graphs.
     graph = {i: [] for i in range(num_vertices)}
     
     # Randomly choose a probability p

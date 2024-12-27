@@ -24,7 +24,7 @@ def generate_random_graph(num_vertices):
     
     for i in range(num_vertices):
         for j in range(i + 1, num_vertices):
-            if random.random() <= p:
+            if random.random() <= p: # Check if a random value is within probability p.
                 edges.append((i, j))
     
     return edges
