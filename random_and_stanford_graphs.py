@@ -64,9 +64,3 @@ def load_graph_from_file(filepath):
             ST_graph.add_edge(node1, node2)
 
     return ST_graph
-
-# Example usage
-if __name__ == "__main__":
-    # Create a sample graph
-    G = convert_adj_list_to_networkx(generate_random_graph(5))  # Random graph with 100 nodes and edge probability 0.05
-    plot_degree_distribution(G)

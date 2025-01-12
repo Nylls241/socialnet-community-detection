@@ -46,6 +46,7 @@ def convert_adj_list_to_networkx(adj_list):
     nx_graph = nx.from_dict_of_lists(adj_list)
     return nx_graph
 
+# === Graphic giving the number of vertices with that degree for each degree of the graph ===
 def plot_degree_distribution(G):
     """
     Plots the degree distribution of a graph.
@@ -76,6 +77,7 @@ def plot_degree_distribution(G):
     plt.xticks(degrees)  # Ensure all degrees are visible
     plt.show()
 
+# === Number of paths induced in the graph of length 2 ===
 def count_induced_paths_length_2(graph):
     """
     Counts the number of induced paths of length 2 in the graph.
