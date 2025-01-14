@@ -1,3 +1,6 @@
+# === Random graph generation ===
+
+import networkx as nx
 import random
 
 def generate_random_graph(num_vertices):
@@ -22,7 +25,7 @@ def generate_random_graph(num_vertices):
     
     # Initialize an empty adjacency list for each vertex
     # This list adjacency represents a graph using lists where each vertex has a list of its directly connected neighbors, offering a space-efficient structure for sparse graphs.
-    graph = {i: [] for i in range(num_vertices)}
+    random_graph = {i: [] for i in range(num_vertices)}
     
     # Randomly choose a probability p
     p = random.uniform(0.01, 0.99)  # Ensure 0 < p < 1
@@ -32,7 +35,32 @@ def generate_random_graph(num_vertices):
         for j in range(i + 1, num_vertices):
             if random.random() <= p:  # Create an edge with probability p
                 # Add the edge (i, j)
-                graph[i].append(j)
-                graph[j].append(i)
+                random_graph[i].append(j)
+                random_graph[j].append(i)
     
-    return graph
+    return random_graph
+
+# === Load  Stanford graph  ===
+def load_graph_from_file(filepath):
+    """
+    Load a graph from a text file into a NetworkX structure.
+
+    Args:
+        filepath (str): Path to the file containing the graph data. 
+                        The file should have one edge per line, with two node IDs separated by a space.
+    
+    Returns:
+        networkx.Graph: A NetworkX graph.
+    """
+    ST_graph = nx.Graph()
+    with open(filepath, 'r') as file:  
+        for line in file:  
+            # Strip any whitespace or newline characters from the line and split it into two parts (node1 and node2)
+            # Convert the split strings into integers using map(int, ...)
+            node1, node2 = map(int, line.strip().split())  
+            
+            # Add an edge between node1 and node2 in the graph
+            # This means node1 is connected to node2 in the network
+            ST_graph.add_edge(node1, node2)
+
+    return ST_graph
