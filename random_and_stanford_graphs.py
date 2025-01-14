@@ -2,7 +2,6 @@
 
 import networkx as nx
 import random
-from graph_analysis import plot_degree_distribution, convert_adj_list_to_networkx
 
 def generate_random_graph(num_vertices):
     """
@@ -41,6 +40,7 @@ def generate_random_graph(num_vertices):
     
     return random_graph
 
+# === Load  Stanford graph  ===
 def load_graph_from_file(filepath):
     """
     Load a graph from a text file into a NetworkX structure.
