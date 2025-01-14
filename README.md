@@ -3,52 +3,33 @@ Detection of communities in social networks
 
 ## Table of Contents
 
-- [Social Network Community Detection](#social-network-community-detection)
+- [socialnet-community-detection](#socialnet-community-detection)
+  - [Table of Contents](#table-of-contents)
   - [Directory Structure](#directory-structure)
   - [Installation](#installation)
-  - [Usage](#usage)
-    - [Running the Main Script](#running-the-main-script)
-    - [Graph Analysis](#graph-analysis)
-    - [Random and Stanford Graphs](#random-and-stanford-graphs)
-  - [Data Files](#data-files)
-  - [Project Configuration](#project-configuration)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Contact](#contact)
+  - [Run the menu](#run-the-menu)
+
 
 ## Directory Structure
-└── nylls241-socialnet-community-detection/
-    ├── README.md
-    ├── LICENSE
-    ├── __init__.py
-    ├── email-Eu-core-department-labels.txt
-    ├── facebook_combined.txt
-    ├── graph_analysis.py
-    ├── lastfm_asia_edges.txt
-    ├── main.py
-    ├── pyproject.toml
-    └── random_and_stanford_graphs.py
+TODO
 
 ## Installation
 
-1. Clone the repository:
-```sh
-git clone https://github.com/yourusername/nylls241-socialnet-community-detection.git
-cd nylls241-socialnet-community-detection
-```
-2. Create and activate a virtual environment: 
+1. Create and activate a virtual environment: 
+Open a terminal, go the directory of the project, and type:
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Install the required dependencies using: `pyproject.toml`
+2. Install the required dependencies:
 ```sh
-pip install .
+pip install -r requirements.txt
 ```
-4. (Optional) Install development dependencies: 
+
+## Run the menu
 ```sh
-pip install .[dev]
+python main.py
 ```
 
 
